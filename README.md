@@ -9,6 +9,7 @@ This repository contains the **SecureProject.ipynb** Jupyter Notebook, which dem
 - **Multi-Model Integration:** Leverages several LLMs, including CodeLlama, Llama2 Chat, StarCoder2, WizardCoder-Python, and Mistral-7B-Instruct.
 - **Vulnerability Analysis:** Uses zero-shot and chain-of-thought prompts to identify potential security vulnerabilities in Java code.
 - **Functional Validation:** Evaluates whether Java methods correctly implement intended functionalities such as secure password storage and email validation.
+- **Combined Prompt Analysis:** Uses zero-shot and chain-of-thought prompts to identify potential security vulnerabilities and functional vulnerabilities in a Java code.
 - **Interactive Demonstrations:** Generates and prints responses directly within the notebook, showcasing how different models approach code analysis.
 - **Resource Management:** Includes cleanup procedures to free GPU memory and delete cache directories after execution.
 
@@ -46,6 +47,17 @@ Java methods intended to securely handle passwords and validate emails are also 
 - Generating zero-shot responses to quickly assess code functionality.
 - Generating chain-of-thought responses for a deeper, step-by-step analysis.
 
+### Combined Prompt Analysis
+
+Java scripts containing both code vulnerabilities and functional vulnerabilities. Such vulnerabilities include:
+- SQL Injection Vulnerability
+- File Path Traversal Vulnerability
+- DoS Vulnerability
+
+For each snippet, prompts are defined in two formats:
+- **Zero-shot:** A brief analysis request.
+- **Chain-of-Thought:** A detailed, step-by-step reasoning prompt.
+
 ### Multi-Model Comparison
 
 The notebook demonstrates how different models handle the same prompts:
@@ -54,6 +66,17 @@ The notebook demonstrates how different models handle the same prompts:
 - **StarCoder2:** Produces both deterministic and varied responses based on configuration.
 - **WizardCoder-Python:** Applies robust quantisation techniques for enhanced performance.
 - **Mistral-7B-Instruct:** Formats prompts for clear, instructive output.
+
+## Repository Structure
+
+The repository structure is as follows:
+
+```
+project-root/
+├── README.md                 # Project documentation (this file)
+├── Benchmarks.xlsx           # Spreadsheet with benchmark results
+└── SecureProject.ipynb       # Main source code directory
+```
 
 ### Resource Management
 
@@ -76,5 +99,4 @@ To run the notebook and see the live demonstrations:
 
 When you run the notebook, you will observe:
 - **Printed Responses:** Detailed outputs from each language model for both vulnerability detection and functional validation tasks.
-- **Comparative Analysis:** Insights into how different models perform on the same security code analysis tasks.
 - **Efficient Resource Cleanup:** Confirmation messages indicating that caches and GPU memory have been cleared after execution.
