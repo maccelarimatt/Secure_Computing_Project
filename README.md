@@ -78,7 +78,3 @@ When you run the notebook, you will observe:
 - **Printed Responses:** Detailed outputs from each language model for both vulnerability detection and functional validation tasks.
 - **Comparative Analysis:** Insights into how different models perform on the same security code analysis tasks.
 - **Efficient Resource Cleanup:** Confirmation messages indicating that caches and GPU memory have been cleared after execution.
-
----
-
-Feel free to customise this README as your project evolves or as new models and analysis techniques are incorporated.
